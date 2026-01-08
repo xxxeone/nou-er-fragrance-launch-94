@@ -34,11 +34,11 @@ const CTASection = () => {
 
                         {/* Tagline */}
                         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.3]">
-                            开启你的香氛之旅
+                            开启属于你的气场之旅
                         </h2>
 
                         <p className="text-lg md:text-xl text-white/80 font-light mb-12 max-w-2xl mx-auto">
-                            体验专为你而设的高端香氛性能
+                            体验以香氛唤醒自信、守住气场的高端能量表现
                         </p>
 
                         {/* CTA Button */}

@@ -9,7 +9,7 @@ const Footer = () => {
       links: [
         { label: "White Series", href: "#products" },
         { label: "Black Series", href: "#products" },
-        { label: "体验礼盒", href: "#products" },
+        { label: "小样精品", href: "#products" },
       ],
     },
     {

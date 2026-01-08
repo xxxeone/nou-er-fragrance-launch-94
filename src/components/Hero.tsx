@@ -30,15 +30,15 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 font-light max-w-lg mx-auto lg:mx-0 mb-10 animate-fade-in-delay-2">
-              专为持久清新而生，专为陪伴你而来。
+              以香氛唤醒自信，守住你的气场。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-delay-3">
               <Button variant="heroFilled" size="xl">
-                选购 15ml
+                选购 20ml
               </Button>
               <Button variant="hero" size="xl">
-                体验礼盒
+                小样精品
               </Button>
             </div>
           </div>

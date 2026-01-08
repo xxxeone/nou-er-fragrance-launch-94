@@ -281,3 +281,42 @@ html {
     --angle: 360deg;
   }
 }
+
+/* Fullscreen video styles - maintain vertical aspect ratio */
+*:fullscreen video {
+  width: auto !important;
+  height: 100vh !important;
+  max-width: calc(100vh * 9 / 16) !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+}
+
+*:fullscreen .fullscreen-hide {
+  display: none !important;
+}
+
+/* For Firefox */
+*:-moz-full-screen video {
+  width: auto !important;
+  height: 100vh !important;
+  max-width: calc(100vh * 9 / 16) !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+}
+
+*:-moz-full-screen .fullscreen-hide {
+  display: none !important;
+}
+
+/* For Safari/Webkit */
+*:-webkit-full-screen video {
+  width: auto !important;
+  height: 100vh !important;
+  max-width: calc(100vh * 9 / 16) !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+}
+
+*:-webkit-full-screen .fullscreen-hide {
+  display: none !important;
+}

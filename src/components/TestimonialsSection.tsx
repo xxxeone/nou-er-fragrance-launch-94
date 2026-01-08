@@ -23,7 +23,7 @@ const testimonials = [
         name: "Wei Jie",
         location: "Selangor",
         rating: 5,
-        review: "体验礼盒很值得买!可以试两个味道,我比较喜欢White Series,清新又不会太甜。女朋友说闻起来很舒服,我就immediately买了15ml的。",
+        review: "小样精品很值得买!可以试两个味道,我比较喜欢White Series,清新又不会太甜。女朋友说闻起来很舒服,我就immediately买了20ml的。",
     },
     {
         name: "Bryan Lim",

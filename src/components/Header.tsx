@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
 import nouerLogo from "@/assets/nouer-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartCount] = useState(0);
+  const { itemCount } = useCart();
 
   const navItems = [
     { label: "产品", href: "#products" },
@@ -41,14 +42,16 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="relative text-foreground">
-              <ShoppingBag className="h-5 w-5" />
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-foreground text-background text-xs flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
-            </Button>
+            <a href="/cart">
+              <Button variant="ghost" size="icon" className="relative text-foreground">
+                <ShoppingBag className="h-5 w-5" />
+                {itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-foreground text-background text-xs flex items-center justify-center animate-in zoom-in">
+                    {itemCount}
+                  </span>
+                )}
+              </Button>
+            </a>
 
             {/* Mobile Menu Toggle */}
             <Button

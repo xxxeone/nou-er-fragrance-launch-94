@@ -8,6 +8,8 @@ import PosterGallery from "@/components/PosterGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import IngredientsSection from "@/components/IngredientsSection";
+import CertificationSection from "@/components/CertificationSection";
 
 const Index = () => {
   return (
@@ -29,11 +31,13 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
+          <IngredientsSection />
           <ProductSection />
           <WhySection />
           <BrandPhilosophy />
           <PosterGallery />
           <TestimonialsSection />
+          <CertificationSection />
           <CTASection />
         </main>
         <Footer />

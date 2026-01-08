@@ -15,11 +15,11 @@ import blackBottle1 from "@/assets/black-bottle-1.png";
 import whiteBottle2 from "@/assets/white-bottle-2.png";
 import blackBottle2 from "@/assets/black-bottle-2.png";
 import solaceDetailImg from "@/assets/solace-detail-new.png";
-import charmedDetailImg from "@/assets/charmed-detail.png";
+import charmedDetailImg from "@/assets/charmed-detail-v3.png";
 import logoWhite from "@/assets/logo-white.png";
 import discoverySetImg from "@/assets/discovery-set.png";
-import diffuser1 from "@/assets/diffuser-1.png";
-import diffuser2 from "@/assets/diffuser-2.png";
+import diffuser1 from "@/assets/diffuser-car-new.png";
+import diffuser2 from "@/assets/diffuser-indoor-new.png";
 import diffuser3 from "@/assets/diffuser-3.png";
 
 const products = [
@@ -29,8 +29,8 @@ const products = [
     detailImage: solaceDetailImg,
     name: "Solace",
     title: "清雅之境",
-    subtitle: "White Series · Solace · 15ml",
-    description: "优雅清新，从容自若。专为日常穿戴而生。",
+    subtitle: "White Series · Solace · 20ml",
+    description: "优雅清新 · 特香持久 · 守护磁场",
     tagline: "优雅清新 · 特香持久 · 守护磁场",
     essence: "清新木质调性，温暖而持久。适合日常穿戴，让你在繁忙的一天中保持优雅自信。",
     notes: {
@@ -39,7 +39,7 @@ const products = [
       heart: "岩兰草、檀香",
       base: "乳香"
     },
-    price: "RM 89",
+    price: "RM 129",
     variant: "white" as const,
   },
   {
@@ -48,8 +48,8 @@ const products = [
     detailImage: charmedDetailImg,
     name: "Charmed",
     title: "魅力之境",
-    subtitle: "Black Series · Charmed · 15ml",
-    description: "奢华深沉，内敛自信。为重要时刻而生。",
+    subtitle: "Black Series · Charmed · 20ml",
+    description: "奢华深沉 · 特香持久 · 磁场强大",
     tagline: "奢华深沉 · 特香持久 · 磁场强大",
     essence: "深邃木质调性，温暖而优雅。适合重要场合和夜晚时刻，展现内在的自信与魅力。",
     notes: {
@@ -58,7 +58,7 @@ const products = [
       heart: "檀香、广藿香",
       base: "乳香"
     },
-    price: "RM 89",
+    price: "RM 129",
     variant: "black" as const,
   },
 ];
@@ -102,7 +102,7 @@ const ProductSection = () => {
                     <img
                       src={selectedProduct.detailImage}
                       alt={selectedProduct.name}
-                      className="w-full h-full object-cover object-[center_25%]"
+                      className="w-full h-full object-cover object-[center_10%]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-transparent" />
 
@@ -215,10 +215,10 @@ const ProductSection = () => {
                   {/* Large Title */}
                   <div>
                     <h3 className="font-display text-5xl lg:text-6xl font-light text-charcoal mb-1 leading-[1.1] tracking-tight">
-                      体验
+                      小样
                     </h3>
                     <h3 className="font-display text-5xl lg:text-6xl font-light text-gold leading-[1.1] tracking-tight italic">
-                      礼盒
+                      精品
                     </h3>
                   </div>
 
@@ -241,30 +241,6 @@ const ProductSection = () => {
                       <p className="text-sm text-charcoal/80">
                         在承诺之前,先找到属于你的独特香气
                       </p>
-                    </div>
-                  </div>
-
-                  {/* Decorative Price Card with Discount Badge */}
-                  <div className="relative inline-block mt-8">
-                    {/* Price Card */}
-                    <div className="bg-cream/40 border border-cream-dark/20 rounded-xl px-8 py-6 pr-20">
-                      <p className="text-[10px] tracking-[0.3em] uppercase text-charcoal/50 mb-2">
-                        体验优惠价格
-                      </p>
-                      <div className="flex items-baseline gap-1">
-                        <span className="font-display text-4xl text-charcoal font-light">RM</span>
-                        <span className="font-display text-5xl text-gold font-medium">50</span>
-                      </div>
-                      <p className="text-xs text-charcoal/40 mt-1 line-through">
-                        原价 RM 80
-                      </p>
-                    </div>
-                    {/* Circular Discount Badge */}
-                    <div className="absolute -top-2 -right-2 bg-gold rounded-full w-14 h-14 flex items-center justify-center shadow-lg">
-                      <div className="text-center text-white">
-                        <p className="text-[10px] font-medium leading-tight">省</p>
-                        <p className="text-base font-semibold leading-tight">38%</p>
-                      </div>
                     </div>
                   </div>
 
@@ -336,7 +312,7 @@ const ProductSection = () => {
             {/* Subtitle - Refined with separator */}
             <div className="flex items-center justify-center gap-3 mb-12">
               <p className="text-sm lg:text-base text-white/70 font-light tracking-wide">
-                5ML
+                10ml
               </p>
               <div className="w-1 h-1 rounded-full bg-white/40" />
               <p className="text-sm lg:text-base text-white/70 font-light tracking-wide">

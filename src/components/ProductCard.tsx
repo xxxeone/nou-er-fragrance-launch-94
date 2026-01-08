@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "sonner";
 
 interface ProductCardProps {
+  id: string;
+  name: string;
   image: string;
   title: string;
   subtitle: string;
@@ -12,6 +16,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({
+  id,
+  name,
   image,
   title,
   subtitle,
@@ -21,6 +27,27 @@ const ProductCard = ({
   variant = "white",
   onViewDetails,
 }: ProductCardProps) => {
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    if (!price) return;
+
+    // Parse price from string like "RM 129"
+    const priceValue = parseFloat(price.replace(/[^\d.]/g, ''));
+
+    addItem({
+      id: `${id}-${variant}`,
+      name,
+      variant: subtitle,
+      price: priceValue,
+      image,
+    });
+
+    toast.success("已加入购物车", {
+      description: `${name} - ${subtitle}`,
+    });
+  };
+
   return (
     <div className="group relative">
       {/* Image Container - Now Clickable */}
@@ -75,10 +102,15 @@ const ProductCard = ({
           <p className="font-display text-xl tracking-wide pt-2">{price}</p>
         )}
 
-        {/* Only Buy Button Now */}
+        {/* Add to Cart Button */}
         <div className="pt-4">
-          <Button variant="product" size="lg" className="w-full">
-            立即购买
+          <Button
+            variant="product"
+            size="lg"
+            className="w-full"
+            onClick={handleAddToCart}
+          >
+            加入购物车
           </Button>
         </div>
       </div>
