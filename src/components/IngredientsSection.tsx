@@ -94,7 +94,7 @@ const IngredientsSection = () => {
                             </span>
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            精选高品质原料，打造持久香氛体验
+                            精选高品质原料，打造从容自信的气场体验
                         </p>
                         <div className="pt-4">
                             <p className="text-sm text-muted-foreground">
