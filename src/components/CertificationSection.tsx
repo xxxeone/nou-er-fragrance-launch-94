@@ -19,9 +19,10 @@ const CertificationSection = () => {
                             <h2 className="font-display text-4xl lg:text-5xl xl:text-6xl font-light mb-8">
                                 安全认证
                             </h2>
-                            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed">
-                                每一款 Nou'er 香氛，皆通过正规安全检测与认证，
-                                符合日常使用标准。
+                            <p className="text-muted-foreground leading-relaxed">
+                                每一款 NOU'ER 香氛，皆通过正规安全检测与认证，
+                                确保符合国际安全标准。我们坚持透明化的配方标注，
+                                让您在享受气场提升的同时，也拥有最安心的使用体验。
                             </p>
                         </div>
 
