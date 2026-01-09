@@ -11,7 +11,7 @@ const IngredientsSection = () => {
             id: "white-series",
             title: "White Series",
             subtitle: "清雅之境",
-            description: "优雅清新 · 特香持久 · 守护磁场",
+            description: "优雅清新 · 守护磁场",
             src: "/videos/white-series-ingredients.mp4",
             theme: "white",
         },
@@ -19,7 +19,7 @@ const IngredientsSection = () => {
             id: "black-series",
             title: "Black Series",
             subtitle: "魅力之境",
-            description: "奢华深沉 · 特香持久 · 磁场强大",
+            description: "奢华深沉 · 磁场强大",
             src: "/videos/black-series-ingredients.mp4",
             theme: "black",
         },
@@ -82,22 +82,40 @@ const IngredientsSection = () => {
 
 
     return (
-        <section className="relative py-24 bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section className="relative py-24 overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+                <img
+                    src="/ingredients-bg.jpeg"
+                    alt="Ingredients Background"
+                    className="w-full h-full object-cover"
+                />
+                {/* Strong fade at top and bottom for smooth transitions */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/50" />
+            </div>
+
+            {/* Top gradient transition */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent z-10" />
+
+            {/* Bottom gradient transition */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
+
+            <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col lg:flex-row gap-12 items-center max-w-7xl mx-auto">
                     {/* Left Side - Section Header */}
                     <div className="lg:w-2/5 space-y-6">
-                        <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">
+                        <h2 className="text-5xl lg:text-6xl font-bold tracking-tight text-white">
                             我们的配方
-                            <span className="block text-3xl lg:text-4xl font-light text-muted-foreground mt-3">
+                            <span className="block text-3xl lg:text-4xl font-light text-white/80 mt-3">
                                 Ingredients
                             </span>
                         </h2>
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            精选高品质原料，打造从容自信的气场体验
+                        <p className="text-lg text-white/90 leading-relaxed">
+                            我们的配方核心在于通过 COA 认证的原材料组合，<br />
+                            带来可被感知的能量状态。这不是气味修饰，而是状态干预。
                         </p>
                         <div className="pt-4">
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-sm text-white/70">
                                 点击视频查看详细配方展示
                             </p>
                         </div>

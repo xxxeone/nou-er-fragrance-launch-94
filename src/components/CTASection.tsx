@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import nouerLogo from "@/assets/nouer-logo.png";
-import ctaBackground from "@/assets/cta-background.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const CTASection = () => {
@@ -11,13 +10,19 @@ const CTASection = () => {
             {/* Breathing Background Image */}
             <div className="absolute inset-0">
                 <img
-                    src={ctaBackground}
+                    src="/cta-bg.jpeg"
                     alt="NOU'ER CTA Background"
                     className="w-full h-full object-cover animate-breathe scale-110"
                 />
                 {/* Overlay gradient for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40" />
             </div>
+
+            {/* Top gradient transition */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent z-10" />
+
+            {/* Bottom gradient transition */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 <div className="flex items-center justify-center min-h-[60vh]">

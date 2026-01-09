@@ -74,13 +74,13 @@ const ProductCard = ({
       {/* Content */}
       <div className="space-y-4">
         <div>
-          <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-2">
+          <p className="text-xs tracking-[0.3em] uppercase text-white/70 mb-2">
             {subtitle}
           </p>
-          <h3 className="font-display text-2xl lg:text-3xl font-light">{title}</h3>
+          <h3 className="font-display text-2xl lg:text-3xl font-light text-white">{title}</h3>
         </div>
 
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-white/90 text-sm leading-relaxed">
           {description}
         </p>
 
@@ -89,9 +89,9 @@ const ProductCard = ({
             {benefits.map((benefit, index) => (
               <li
                 key={index}
-                className="text-sm text-muted-foreground flex items-start gap-2"
+                className="text-sm text-white/80 flex items-start gap-2"
               >
-                <span className="w-1 h-1 rounded-full bg-gold mt-2 flex-shrink-0" />
+                <span className="w-1 h-1 rounded-full bg-white/60 mt-2 flex-shrink-0" />
                 {benefit}
               </li>
             ))}
@@ -99,15 +99,15 @@ const ProductCard = ({
         )}
 
         {price && (
-          <p className="font-display text-xl tracking-wide pt-2">{price}</p>
+          <p className="font-display text-xl tracking-wide pt-2 text-white">{price}</p>
         )}
 
         {/* Add to Cart Button */}
         <div className="pt-4">
           <Button
-            variant="product"
+            variant="ghost"
             size="lg"
-            className="w-full"
+            className="w-full border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
             onClick={handleAddToCart}
           >
             加入购物车

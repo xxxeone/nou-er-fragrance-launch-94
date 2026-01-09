@@ -1,28 +1,44 @@
 import poster1 from "@/assets/posters/1.png";
 import poster2 from "@/assets/posters/2.png";
-import poster3 from "@/assets/posters/3.png";
 import poster4 from "@/assets/posters/4.png";
 import poster5 from "@/assets/posters/5.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const posters = [poster1, poster2, poster3, poster4, poster5];
+const posters = [poster1, poster2, poster4, poster5];
 
 const PosterGallery = () => {
     const { ref, isVisible } = useScrollAnimation();
 
     return (
-        <section ref={ref as React.RefObject<HTMLElement>} className={`py-16 lg:py-24 bg-background overflow-hidden scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
-            <div className="mb-12 text-center">
-                <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground">
+        <section ref={ref as React.RefObject<HTMLElement>} className={`relative py-16 lg:py-24 overflow-hidden scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
+            {/* Background Image */}
+            <div className="absolute inset-0">
+                <img
+                    src="/gallery-bg.jpeg"
+                    alt="Gallery Background"
+                    className="w-full h-full object-cover"
+                />
+                {/* Overlay gradient for better content visibility */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/40" />
+            </div>
+
+            {/* Top gradient transition */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent z-10" />
+
+            {/* Bottom gradient transition */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
+
+            <div className="mb-12 text-center relative z-10">
+                <p className="text-xs tracking-[0.4em] uppercase text-white/70">
                     Gallery
                 </p>
             </div>
 
             {/* Infinite Scroll Container */}
-            <div className="relative">
+            <div className="relative z-10">
                 {/* Gradient Overlays */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
 
                 {/* Scrolling Track */}
                 <div className="flex gap-8 animate-scroll-slow">
