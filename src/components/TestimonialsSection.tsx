@@ -8,13 +8,13 @@ const testimonials = [
         review: "我每天开会前都会喷一喷,整个人精神很多。之前一直昏昏沉沉的,现在可以focus做工。这个不是香水那么简单,是真的可以帮到我stay alert。同事都问我最近是不是换了什么supplement,哈哈其实是这个啦。",
     },
     {
-        name: "Marcus Tan",
+        name: "Michelle Tan",
         location: "Penang",
         rating: 5,
         review: "Black Series那瓶我用来谈生意的时候喷。Wah真的不同,整个energy level up了。客户meeting的时候也比较有信心,讲话也比较有力。这个真的work,不是心理作用那种。",
     },
     {
-        name: "Wei Kit",
+        name: "Jasmine Lim",
         location: "Selangor",
         rating: 5,
         review: "放在bag里面随时可以补,超方便的。有时候下午三四点会累,我就去toilet喷一下,马上refresh。Size刚刚好,不会占位置。现在车里、office、bag都各放一瓶,随时需要随时用。",
@@ -26,7 +26,7 @@ const testimonials = [
         review: "这个价钱买到这种quality,真的值得。比起那些几百块的大牌,这个performance一样好,但是price合理很多。而且是真的有effect的,不是那种只有香味没有用的香水。钱花得很value。",
     },
     {
-        name: "Aaron Ng",
+        name: "Rachel Wong",
         location: "Subang Jaya",
         rating: 5,
         review: "用了White Series一个星期,发现做工真的比较专注。尤其是下午那种sleepy feeling减少了很多。以前要靠coffee,现在喷这个就够了。能量真的有提升到,不是心理作用。",

@@ -42,7 +42,7 @@ const Footer = () => {
               className="h-10 w-auto mb-6 brightness-0 invert"
             />
             <p className="text-background/60 text-sm leading-relaxed max-w-sm">
-              提升你每天的潜能
+              守护你的能量磁场
             </p>
 
           </div>
